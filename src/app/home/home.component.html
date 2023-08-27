@@ -1,0 +1,20 @@
+<h1>Product List</h1>
+ 
+   <div class='table-responsive'>
+   <table class='table'>
+       <thead>
+           <tr>
+               <th>Id</th>
+               <th>Title</th>
+               <th>Body</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let product of products;">
+               <td><a>{{product.id}} </a> </td>
+               <td>{{product.title}}</td>
+               <td>{{product.body}}</td>
+           </tr>
+       </tbody>
+     </table>
+  </div>
