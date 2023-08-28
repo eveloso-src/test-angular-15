@@ -8,9 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { AuthServiceService } from './auth-service.service';
-import { ProductServiceService } from './product-service.service';
-import { AuthInterceptorService } from './auth-interceptor.service';
+import { AuthServiceService } from './service/auth-service.service';
+import { ProductServiceService } from './service/product-service.service';
+import { AuthInterceptorService } from './service/auth-interceptor.service';
 
 
 @NgModule({
