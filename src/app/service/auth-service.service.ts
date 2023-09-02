@@ -19,7 +19,6 @@ export class AuthServiceService implements CanActivate {
   }
 
   canActivate() {
-    debugger
     if (!this.loginService.isLogged()) {
       this.router.navigate(["/login"]);
       return false;
