@@ -26,10 +26,13 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   onFormSubmit(loginForm: any) {
 
+    console.log(loginForm.username.value)
+    console.log(loginForm.password.value)
+
     this.subscription = this.authService.login(loginForm.username.value, loginForm.password.value).subscribe(data => {
       if (data) {
         localStorage.setItem("username", loginForm.username.value)
-        this.router.navigate(['home']);
+        this.router.navigate(['/']);
       }
     });
 
@@ -38,4 +41,4 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscription?.unsubscribe()
   }
-} 
+}

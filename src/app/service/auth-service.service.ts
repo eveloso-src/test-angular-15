@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { LoginServiceService } from './login-service.service';
-import { Product } from '../model/Product';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -20,8 +19,9 @@ export class AuthServiceService implements CanActivate {
   }
 
   canActivate() {
+    debugger
     if (!this.loginService.isLogged()) {
-      this.router.navigate(["/"]);
+      this.router.navigate(["/login"]);
       return false;
     }
 
